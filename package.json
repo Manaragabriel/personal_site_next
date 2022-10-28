@@ -1,0 +1,41 @@
+{
+  "name": "gabriel_manara_site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "classnames": "^2.3.1",
+		"graphql": "^15.5.1",
+		"headroom.js": "^0.12.0",
+		"moment": "^2.29.1",
+    "bootstrap": "^5.0.2",
+    "react-datetime": "^3.0.4",
+		"react-easy-emoji": "^1.5.0",
+		"react-headroom": "^3.1.1",
+		"react-lottie": "^1.2.3",
+		"react-reveal": "^1.2.2",
+		"react-scripts": "^4.0.3",
+		"react-typist": "^2.0.5",
+		"reactstrap": "^8.9.0",
+		"sharp": "^0.29.1",
+    "@iconify/react": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.23",
+    "@types/react-dom": "18.0.7",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0",
+    "typescript": "4.8.4"
+  
+
+  }
+}
