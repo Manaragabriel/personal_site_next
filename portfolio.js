@@ -6,7 +6,7 @@ export const greetings = {
 	description:
 		"I am a Full Stack Developer. I have experience with Front End using React, Next and Vue js. I also experience with Backend using (.NET,Java, PHP, Node js). I also have experience with Clean Architecture, Clean Code, Git Flow and SCRUM ",
 	resumeLink:
-		"https://docs.google.com/document/d/1_4RIfbyt4FFHW_bNplnoINQr01neTu7XDeeUlT_2O_k/edit?usp=sharing",
+		"https://onedrive.live.com/?cid=328809CBC229FD67&id=328809CBC229FD67%211976&parId=328809CBC229FD67%21124&o=OneUp",
 };
 
 export const openSource = {
@@ -16,12 +16,10 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks = {
-	url: "https://1hanzla100.github.io/",
-	linkedin: "https://www.linkedin.com/in/1hanzla100/",
-	github: "https://github.com/1hanzla100",
-	instagram: "https://www.instagram.com/__hanzla100",
-	facebook: "https://www.facebook.com/1hanzla100",
-	twitter: "https://twitter.com/1hanzla100",
+	url: "https://github.com/Manaragabriel",
+	linkedin: "https://www.linkedin.com/in/gabriel-manara-a12b75142/",
+	github: "https://github.com/Manaragabriel",
+
 };
 
 export const skillsSection = {
@@ -240,7 +238,7 @@ export const experience = [
 ];
 
 export const projects = [
-	{
+	/*{
 		name: "developer-portfolio",
 		desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
 		github: "https://github.com/1hanzla100/developer-portfolio",
@@ -260,7 +258,7 @@ export const projects = [
 		name: "Shopaza (Ecommerce)",
 		desc: "Now your reach to all your favorite entertainment and luxury items is just one touch apart",
 		github: "https://github.com/1hanzla100/Django-ecommerce",
-	},
+	}, */
 ];
 
 export const feedbacks = [
