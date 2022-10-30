@@ -26,7 +26,7 @@ Home.prototype = {
   githubProfileData: PropTypes.object.isRequired,
 };
 
-export async function getStaticProps(_) {
+export async function getStaticProps(_: any) {
   const githubProfileData = await fetch(
     `https://api.github.com/users/${openSource.githubUserName}`
   ).then((res) => res.json());

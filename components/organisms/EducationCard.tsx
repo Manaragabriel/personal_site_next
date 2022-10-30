@@ -3,7 +3,7 @@ import { Card, CardBody, Badge } from "reactstrap";
 
 import { Fade } from "react-reveal";
 
-const EducationCard = ({ education }) => {
+const EducationCard = ({ education }: any) => {
   return (
     <Fade left duration={2000}>
       <Card className="card-lift--hover shadow mt-4">
@@ -38,7 +38,7 @@ const EducationCard = ({ education }) => {
               <p className="description mt-3">{education.desc}</p>
               <ul>
                 {education.descBullets
-                  ? education.descBullets.map((desc) => {
+                  ? education.descBullets.map((desc: any) => {
                       return <li key={desc}>{desc}</li>;
                     })
                   : null}
