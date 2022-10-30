@@ -6,7 +6,7 @@ export const greetings = {
 	description:
 		"I am a Full Stack Developer. I have experience with Front End using React, Next and Vue js. I also experience with Backend using (.NET,Java, PHP, Node js). I also have experience with Clean Architecture, Clean Code, Git Flow and SCRUM ",
 	resumeLink:
-		"https://onedrive.live.com/?cid=328809CBC229FD67&id=328809CBC229FD67%211976&parId=328809CBC229FD67%21124&o=OneUp",
+		"https://1drv.ms/b/s!Amf9KcLLCYgyjz1omxfqvDc7GJo_?e=dxxnKo",
 };
 
 export const openSource = {
