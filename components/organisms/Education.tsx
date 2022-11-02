@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EducationCard from "./EducationCard";
-import { educationInfo } from "../../portfolio";
 import { Container, Row, Col } from "reactstrap";
+import EducationInfo from "../../core/domain/EducationInfo";
+import GetEducationUseCase from "../../core/application/useCases/Education/getEducation/getEducationUseCase";
 
 const Education = () => {
+  const [educationInfo, setEducationInfo] = useState<EducationInfo[]>([]);
+
+  useEffect(() => {
+    const educationData = new GetEducationUseCase().execute();
+    setEducationInfo(educationData);
+  }, []);
+
   return (
     educationInfo && (
       <section className="section pb-0 bg-gradient-info my-5">

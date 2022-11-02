@@ -1,9 +1,17 @@
-import React from "react";
-import { experience } from "../../portfolio";
 import { Container, Row } from "reactstrap";
 import ExperienceCard from "../../components/ExperienceCard";
+import { useEffect, useState } from "react";
+import Experience from "../../core/domain/Experience";
+import GetExperienceUseCase from "../../core/application/useCases/Experience/getExperience/getExperienceUseCase";
 
 const Experience = () => {
+  const [experience, setExperience] = useState<Experience[]>([]);
+
+  useEffect(() => {
+    const experienceData = new GetExperienceUseCase().execute();
+    setExperience(experienceData);
+  }, []);
+
   return (
     experience && (
       <section className="section section-lg">

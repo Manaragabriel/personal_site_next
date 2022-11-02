@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
-import { greetings } from "../../portfolio";
+import React, { useEffect, useState } from "react";
 
 import { Button, Container, Row, Col } from "reactstrap";
 
 import GreetingLottie from "../../components/DisplayLottie";
 import Image from "next/image";
 import SocialLinks from "../molecules/SocialLinks";
+import Greeting from "../../core/domain/Greeting";
+import GetGreetingUseCase from "../../core/application/useCases/Greeting/getGreeting/getGreetingUseCase";
 
 const Introduction = () => {
+  const [greeting, setGreeting] = useState<Greeting>();
   useEffect(() => {
     document.documentElement.scrollTop = 0;
-    // document?.scrollingElement?.scrollTop = 0;
-  });
+    const greetingsData = new GetGreetingUseCase().execute();
+    setGreeting(greetingsData);
+  }, []);
   return (
     <main>
       <div className="position-relative">
@@ -32,15 +35,15 @@ const Introduction = () => {
               <Row>
                 <Col lg="6">
                   <h1 className="display-3 text-white">
-                    {greetings.title + " "}
+                    {greeting?.title + " "}
                   </h1>
-                  <p className="lead text-white">{greetings.description}</p>
+                  <p className="lead text-white">{greeting?.description}</p>
                   <SocialLinks />
                   <div className="btn-wrapper my-4">
                     <Button
                       className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
                       color="default"
-                      href={greetings.resumeLink}
+                      href={greeting?.resumeLink}
                     >
                       <span className="btn-inner--icon mr-1">
                         <i className="fa fa-file" />
