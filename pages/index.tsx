@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { openSource } from "../portfolio";
-import SEO from "../components/SEO";
 import Introduction from "../components/organisms/Introduction";
 import Navigation from "../components/organisms/Navigation";
 import Education from "../components/organisms/Education";
@@ -28,7 +26,7 @@ Home.prototype = {
 
 export async function getStaticProps(_: any) {
   const githubProfileData = await fetch(
-    `https://api.github.com/users/${openSource.githubUserName}`
+    `https://api.github.com/users/Manaragabriel`
   ).then((res) => res.json());
 
   return {

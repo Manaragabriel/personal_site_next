@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import EducationCard from "./EducationCard";
 import { Container, Row, Col } from "reactstrap";
 import EducationInfo from "../../core/domain/EducationInfo";
 import GetEducationUseCase from "../../core/application/useCases/Education/getEducation/getEducationUseCase";
+import EducationCard from "../molecules/EducationCard";
 
 const Education = () => {
   const [educationInfo, setEducationInfo] = useState<EducationInfo[]>([]);

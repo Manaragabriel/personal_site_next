@@ -7,6 +7,7 @@ import Image from "next/image";
 import SocialLinks from "../molecules/SocialLinks";
 import Greeting from "../../core/domain/Greeting";
 import GetGreetingUseCase from "../../core/application/useCases/Greeting/getGreeting/getGreetingUseCase";
+import GetResumeButton from "../atoms/Buttons/GetResumeButton";
 
 const Introduction = () => {
   const [greeting, setGreeting] = useState<Greeting>();
@@ -15,6 +16,7 @@ const Introduction = () => {
     const greetingsData = new GetGreetingUseCase().execute();
     setGreeting(greetingsData);
   }, []);
+
   return (
     <main>
       <div className="position-relative">
@@ -40,16 +42,7 @@ const Introduction = () => {
                   <p className="lead text-white">{greeting?.description}</p>
                   <SocialLinks />
                   <div className="btn-wrapper my-4">
-                    <Button
-                      className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-                      color="default"
-                      href={greeting?.resumeLink}
-                    >
-                      <span className="btn-inner--icon mr-1">
-                        <i className="fa fa-file" />
-                      </span>
-                      <span className="btn-inner--text">Get My Resume</span>
-                    </Button>
+                    <GetResumeButton link={greeting?.resumeLink ?? ""} />
                   </div>
                 </Col>
                 <Col

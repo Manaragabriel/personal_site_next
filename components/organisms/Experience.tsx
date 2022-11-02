@@ -1,8 +1,8 @@
 import { Container, Row } from "reactstrap";
-import ExperienceCard from "../../components/ExperienceCard";
 import { useEffect, useState } from "react";
 import Experience from "../../core/domain/Experience";
 import GetExperienceUseCase from "../../core/application/useCases/Experience/getExperience/getExperienceUseCase";
+import ExperienceCard from "../molecules/ExperienceCard";
 
 const Experience = () => {
   const [experience, setExperience] = useState<Experience[]>([]);
